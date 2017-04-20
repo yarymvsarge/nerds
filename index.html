@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;subset=latin,cyrillic" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Roboto:500&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Студия Нёрдс</title>
@@ -10,81 +10,83 @@
   <body>
     <header class="main-header">
       <div class="container clearfix">
-        <nav class="main-navigation">
-          <a href="#" class="main-logo">
-            <img src="img/logo.svg" alt="Студия Нёрдс" height="56" width="139">
-          </a>
-          <ul>
-            <li>
-              <a href="#">Студия</a>
-            </li>
-            <li>
-              <a href="#">Клиенты</a>
-            </li>
-            <li>
-              <a href="#">Магазин</a>
-            </li>
-            <li>
-              <a href="#">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="cart-block">
-          <a href="#" class="cart">Корзина</a>
+        <div class="top-page clearfix">
+          <nav class="main-navigation">
+            <a href="index.html" class="main-logo">
+              <img src="img/logo.svg" alt="Студия Нёрдс" height="56" width="139">
+            </a>
+            <ul>
+              <li>
+                <a href="#">Студия</a>
+              </li>
+              <li>
+                <a href="#">Клиенты</a>
+              </li>
+              <li>
+                <a href="#">Магазин</a>
+              </li>
+              <li>
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="cart-block">
+            <a href="#" class="cart"><i class="icon-basket"></i>Корзина</a>
+          </div>
         </div>
+        <section class="slider">
+          <input type="radio" id="btn-1" name="slider-toggle" checked>
+          <input type="radio" id="btn-2" name="slider-toggle" >
+          <input type="radio" id="btn-3" name="slider-toggle" >
+          <div class="slider-controls">
+            <label for="btn-1"></label>
+            <label for="btn-2"></label>
+            <label for="btn-3"></label>
+          </div>
+          <div class="slider-inner clearfix">
+            <div class="slide slide-1">
+              <div class="slider-text">
+                <b>Долго, дорого,<br>скрупулезно.</b>
+                <p>Математически выверенный дизайн<br>для вашего сайта или мобильного приложения.</p>
+                <a href="#" class="button">Узнать больше</a>
+              </div>
+                <!-- <img src="img/slide-1.png" alt="Картинка первого слайда" width="338" height="231"> -->
+            </div>
+            <div class="slide slide-2">
+              <div class="slider-text">
+                <b>Любите ли вы математику,<br>как любим ее мы?</b>
+                <p>Нашим дизайнерам мы удаляем нейроны, ответственные<br>за креатив, чтобы дать им возможность все просчитать</p>
+                <a href="#" class="button">Узнать больше</a>
+              </div>
+                <!-- <img src="img/slide-2.png" alt="Картинка второго слайда" width="230" height="249"> -->
+            </div>
+            <div class="slide slide-3">
+              <div class="slider-text">
+                <b>Только наркотики,<br>только хардкор!</b>
+                <p>Все дизайнерские решения в нашей компании принимаются<br>только под воздействием качественных галлюциногенов</p>
+                <a href="#" class="button">Узнать больше</a>
+              </div>
+                <!-- <img src="img/slide-3.png" alt="Картинка третьего слайда" width="333" height="319"> -->
+            </div>
+          </div>
+        </section>
       </div>
     </header>
     <main class="container">
-      <section class="slider">
-        <input type="radio" id="btn-1" name="slider-toggle" checked>
-        <input type="radio" id="btn-2" name="slider-toggle">
-        <input type="radio" id="btn-3" name="slider-toggle">
-        <div class="slider-controls">
-          <label for="btn-1"></label>
-          <label for="btn-2"></label>
-          <label for="btn-3"></label>
-        </div>
-        <div class="slider-inner">
-          <div class="slide slide-1">
-            <div class="slider-text">
-              <span>Долго, дорого, скрупулезно.</span>
-              <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
-              <a href="#" class="button">Узнать больше</a>
-            </div>
-            <!-- <img src="img/slide-1.png" alt="Картинка первого слайда" width="338" height="221"> -->
-          </div>
-          <div class="slide slide-2">
-            <div class="slider-text">
-              <span>Любите ли вы математику, как любим ее мы?</span>
-              <p>Нашим дизайнерам мы удаляем нейроны, ответственные за креатив, чтобы дать им возможность все просчитать</p>
-              <a href="#" class="button">Узнать больше</a>
-            </div>
-            <!-- <img src="img/slide-2.png" alt="Картинка второго слайда" width="230" height="249"> -->
-          </div>
-          <div class="slide slide-3">
-            <div class="slider-text">
-              <span>Любите ли вы математику, как любим ее мы?</span>
-              <p>Нашим дизайнерам мы удаляем нейроны, ответственные за креатив, чтобы дать им возможность все просчитать</p>
-              <a href="#" class="button">Узнать больше</a>
-            </div>
-            <!-- <img src="img/slide-3.png" alt="Картинка третьего слайда" width="333" height="319"> -->
-          </div>
-        </div>
-      </section>
-      <section class="products">
-        <div class="product-item">
+      <section class="products clearfix">
+        <div class="products-item">
           <img src="img/feature-1.jpg" alt="Веб-сайты" width="240" height="124">
           <h2>Веб-сайты</h2>
           <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
           <a href="#" class="button">Заказать</a>
         </div>
-        <div class="product-item">
+        <div class="products-item">
           <img src="img/feature-2.jpg" alt="Приложения" width="240" height="124">
           <h2>Приложения</h2>
-          <p>Покорите топ-10 приложений в AppStrore и Google Play</p>
+          <p>Покорите топ-10 приложений<br>в AppStore и Google Play</p>
           <a href="#" class="button button-green">Заказать</a>
         </div>
-        <div class="product-item">
+        <div class="products-item">
           <img src="img/feature-3.jpg" alt="Презентации" width="240" height="124">
           <h2>Презентации</h2>
           <p>Вы даже не подозреваете, насколько вы изумительны!</p>
@@ -92,34 +94,40 @@
         </div>
       </section>
       <div class="about-us">
-        <div class="column-left">
-          <div class="about-us-description">
-            <p class="about-us-title"><b>Мы — маленькая, но гордая дизайн-студия из Краснодара.</b></p>
-            <p>Исповедуем принципы минимализма и чистоты.
-            Ставим математический расчет выше креатива.
-            Работаем не покладая рук, как роботы.</p>
+        <div class="inner-columns clearfix">
+          <div class="inner-column-left">
+            <div class="about-us-description">
+              <p class="about-us-title"><b>Мы — маленькая, но гордая дизайн-студия из Краснодара.</b></p>
+              <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет выше креатива. Работаем не покладая рук, как роботы.</p>
+            </div>
           </div>
-          <div class="about-us-lists">
-            <span class="list-title">Выполняем заказы на разработку:</span>
-            <ul>
-              <li>Веб-сайтов любой сложности</li>
-              <li>Мобильных приложений для IOS и Android</li>
-              <li>Слайдшоу и видео для корпоративных презентаций</li>
-            </ul>
+          <div class="inner-column-right">
+            <div class="inner-column-logo">
+              <img src="img/logo.svg" alt="Студия Нёрдс" height="75" width="187">
+              <span>Since 2004</span>
+            </div>
           </div>
         </div>
-        <div class="column-right">
-          <div class="index-logo">
-            <img src="img/logo.svg" alt="Студия Нёрдс" height="56" width="139">
-            <span>Since 2004</span>
+        <div class="inner-columns clearfix">
+          <div class="inner-column-left">
+            <div class="about-us-lists">
+              <span class="list-title">Выполняем заказы на разработку:</span>
+              <ul>
+                <li>Веб-сайтов любой сложности</li>
+                <li>Мобильных приложений для IOS и Android</li>
+                <li>Слайдшоу и видео для корпоративных презентаций</li>
+              </ul>
+            </div>
           </div>
-          <div class="about-us-lists">
-            <span class="list-title">Как мы работаем:</span>
-            <ul>
-              <li>С самоотдачей 146%</li>
-              <li>Соблюдая сроки на 100%</li>
-              <li>По предоплате 50%</li>
-            </ul>
+          <div class="inner-column-right">
+            <div class="about-us-lists">
+              <span class="list-title">Как мы работаем:</span>
+              <ul>
+                <li>С самоотдачей 146%</li>
+                <li>Соблюдая сроки на 100%</li>
+                <li>По предоплате 50%</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
