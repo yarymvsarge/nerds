@@ -163,7 +163,7 @@ body b {
 
 .cart-block {
   float: right;
-  width: 100px;
+  min-width: 100px;
   padding-top: 26px;
   word-wrap: break-word;
 }
@@ -301,8 +301,7 @@ input[name="slider-toggle"] {
 /* ОБЩИЙ СТИЛЬ КНОПОК */
 .button {
   display: inline-block;
-  padding: 10px 70px;
-  margin-bottom: 80px;
+  padding: 10px 20px;
   border-radius: 3px;
   color: #ffffff;
   vertical-align: top;
@@ -315,6 +314,11 @@ input[name="slider-toggle"] {
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+.slider-text .button {
+  padding: 10px 70px;
+  margin-bottom: 80px;
 }
 
 .button:hover {
@@ -370,6 +374,7 @@ input[name="slider-toggle"] {
 
 .products-item .button {
   padding: 10px 40px;
+  margin-bottom: 80px;
 }
 
 .button-green {
@@ -558,9 +563,6 @@ input[name="slider-toggle"] {
   text-align: center;
 }
 
-.catalog {
-  padding-bottom: 75px;
-}
 
 .catalog-column-left {
   float: left;
@@ -710,7 +712,7 @@ input[name="slider-toggle"] {
   color: #b5b5b5;
 }
 
-.catalog-form .button {
+.catalog-button {
   padding-left: 47px;
   padding-right: 47px;
   font-family: "Roboto", "Arial", sans-serif;
@@ -718,11 +720,11 @@ input[name="slider-toggle"] {
   background-color: #f1f1f1;
 }
 
-.catalog-form .button:hover {
+.catalog-button:hover {
   background-color: #e5e5e5;
 }
 
-.catalog-form .button:active {
+.catalog-button:active {
   background-color: #d5d5d5;
 }
 
@@ -811,6 +813,7 @@ input[name="slider-toggle"] {
 
 .catalog-item {
   display: inline-block;
+  position: relative;
   vertical-align: top;
   width: 240px;
   height: 270px;
@@ -833,6 +836,7 @@ input[name="slider-toggle"] {
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
   font-size: 0;
+  transition: background 1s;
 }
 
 .catalog-item-top span {
@@ -844,22 +848,28 @@ input[name="slider-toggle"] {
   background-color: #ffffff;
 }
 
-.catalog-item img {
-  position: absolute;
-}
-
 .catalog-item-block {
-  display: none;
-  position: relative;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
   padding: 0 20px;
   box-sizing: border-box;
   left: 20px;
-  top: 20px;
+  bottom: 20px;
   width: 200px;
   height: 200px;
+  color: #000000;
   text-align: center;
   background-color: #ffffff;
+  overflow: auto;
+  transition: opacity 1s;
 }
+
+.catalog-item-block a {
+  color: #000000;
+  text-decoration: none;
+}
+
 
 .catalog-item-block h1 {
   margin: 0;
@@ -868,7 +878,9 @@ input[name="slider-toggle"] {
   padding-top: 35px;
   font-size: 18px;
   text-transform: uppercase;
+  font-weight: 500;
   line-height: 24px;
+  letter-spacing: 0.01em;
 }
 
 .catalog-item-block p {
@@ -879,15 +891,13 @@ input[name="slider-toggle"] {
 }
 
 .catalog-item-block .button {
-  position: absolute;
-  bottom: 0;
-  right: 30px;
-  left: 30px;
-  margin-bottom: 20px;
+  position: relative;
+  bottom: -30px;
   padding: 10px 30px;
   width: 80px;
   font-size: 18px;
   line-height: 18px;
+  color: #ffffff;
 }
 
 .catalog-item:hover .catalog-item-top {
@@ -895,8 +905,36 @@ input[name="slider-toggle"] {
 }
 
 .catalog-item:hover .catalog-item-block {
-  display: block;
+  opacity: 1;
+  visibility: visible;
 }
+
+.paginator {
+  font-size: 0;
+}
+
+.page-button {
+  min-width: 38px;
+  height: 38px;
+  box-sizing: border-box;
+  margin: 0;
+  margin-right: 10px;
+  padding: 10px 10px;
+  color: #000000;
+  font-size: 12px;
+  border: 2px solid #f1f1f1;
+  background-color: #f1f1f1;
+}
+
+.paginator .catalog-button:last-child {
+  padding: 10px 32px;
+}
+
+.current-page, .current-page:hover, .current-page:active {
+  background-color: #ffffff;
+  box-shadow: none;
+}
+
 
 
 /* ФУТЕР ДЛЯ ВСЕХ СТРАНИЦ (С КАРТОЙ) */
